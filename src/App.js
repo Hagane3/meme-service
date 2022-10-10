@@ -55,12 +55,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate replace to="/regular" />} />
         <Route
-          path="regular"
-          element={<MemesList database={database} category="regular" />}
-        />
-        <Route
           path="hot"
           element={<MemesList database={database} category="hot" />}
+        />
+        <Route
+          path="regular"
+          element={<MemesList database={database} category="regular" />}
         />
       </Routes>
     </div>
