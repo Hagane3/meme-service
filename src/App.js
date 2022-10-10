@@ -3,8 +3,6 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 import { Navigation } from "./components/Navigation";
-import { Hot } from "./pages/Hot";
-import { Regular } from "./pages/Regular";
 import { MemesList } from "./pages/MemesList";
 
 import "./App.css";
