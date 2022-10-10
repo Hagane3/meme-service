@@ -6,6 +6,45 @@ import { Regular } from "./pages/Regular";
 
 import "./App.css";
 
+const MEMES = [
+  {
+    title: "Mem 1",
+    upvotes: 6,
+    downvotes: 0,
+    img: "",
+  },
+  {
+    title: "Mem 2",
+    upvotes: 3,
+    downvotes: 1,
+    img: "",
+  },
+  {
+    title: "Mem 3",
+    upvotes: 5,
+    downvotes: 0,
+    img: "",
+  },
+  {
+    title: "Mem 4",
+    upvotes: 1,
+    downvotes: 5,
+    img: "",
+  },
+  {
+    title: "Mem 5",
+    upvotes: 2,
+    downvotes: 7,
+    img: "",
+  },
+  {
+    title: "Mem 6",
+    upvotes: 8,
+    downvotes: 2,
+    img: "",
+  },
+];
+
 function App() {
   return (
     <div className="App">
