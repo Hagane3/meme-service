@@ -2,6 +2,8 @@ import { useUpdateComponent } from "../hooks/useUpdateComponent";
 
 import { Meme } from "../components/Meme";
 
+import classes from "./MemesList.module.css";
+
 export const MemesList = (props) => {
   const forceUpdate = useUpdateComponent();
 
@@ -13,18 +15,10 @@ export const MemesList = (props) => {
     }
   });
   return (
-    <ul>
+    <ul className={classes.memes_list}>
       {filteredData.map((item) => {
-        const voteUpHandler = () => {
-          item.upvotes += 1;
-          forceUpdate();
-        };
-        const voteDownHandler = () => {
-          item.upvotes -= 1;
-          forceUpdate();
-        };
         return (
-          <Meme key={item.title} details={item} />
+          <Meme key={item.title} details={item} forceUpdate={forceUpdate} />
           // <li key={item.title}>
           //   {item.title}
           //   <button onClick={voteUpHandler}>VOTE UP</button>
