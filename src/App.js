@@ -9,40 +9,40 @@ import "./App.css";
 
 const MEMES = [
   {
-    title: "Mem 1",
+    title: "Meme 1",
     upvotes: 6,
     downvotes: 0,
-    img: "",
+    img: "meme1.png",
   },
   {
-    title: "Mem 2",
+    title: "Meme 2",
     upvotes: 3,
     downvotes: 1,
-    img: "",
+    img: "meme2.png",
   },
   {
-    title: "Mem 3",
+    title: "Meme 3",
     upvotes: 5,
     downvotes: 0,
-    img: "",
+    img: "meme3.png",
   },
   {
-    title: "Mem 4",
+    title: "Meme 4",
     upvotes: 1,
     downvotes: 5,
-    img: "",
+    img: "meme4.png",
   },
   {
-    title: "Mem 5",
+    title: "Meme 5",
     upvotes: 2,
     downvotes: 7,
-    img: "",
+    img: "meme5.png",
   },
   {
-    title: "Mem 6",
+    title: "Meme 6",
     upvotes: 8,
     downvotes: 2,
-    img: "",
+    img: "meme6.png",
   },
 ];
 
