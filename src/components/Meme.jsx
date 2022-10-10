@@ -11,7 +11,6 @@ export const Meme = (props) => {
     details.downvotes += 1;
     props.forceUpdate();
   };
-  console.log(details.img);
   return (
     <div className={classes.meme}>
       <h1>{details.title}</h1>
