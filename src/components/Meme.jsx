@@ -14,7 +14,7 @@ export const Meme = (props) => {
   return (
     <div className={classes.meme}>
       <h1>{details.title}</h1>
-      <img src={require(`../images/${details.img}`)}></img>
+      <img src={details.img}></img>
       <div className={classes.vote}>
         <div className={classes.upvote}>
           <span>{details.upvotes}</span>

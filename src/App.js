@@ -12,37 +12,37 @@ const MEMES = [
     title: "Meme 1",
     upvotes: 6,
     downvotes: 0,
-    img: "meme1.png",
+    img: "images/meme1.png",
   },
   {
     title: "Meme 2",
     upvotes: 3,
     downvotes: 1,
-    img: "meme2.png",
+    img: "images/meme2.png",
   },
   {
     title: "Meme 3",
     upvotes: 5,
     downvotes: 0,
-    img: "meme3.png",
+    img: "images/meme3.png",
   },
   {
     title: "Meme 4",
     upvotes: 1,
     downvotes: 5,
-    img: "meme4.png",
+    img: "images/meme4.png",
   },
   {
     title: "Meme 5",
     upvotes: 2,
     downvotes: 7,
-    img: "meme5.png",
+    img: "images/meme5.png",
   },
   {
     title: "Meme 6",
     upvotes: 8,
     downvotes: 2,
-    img: "meme6.png",
+    img: "images/meme6.png",
   },
 ];
 
