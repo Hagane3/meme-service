@@ -5,6 +5,8 @@ nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid black;
+  padding: 3em 0;
 }
 
 nav ul {
@@ -21,4 +23,8 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-size: 2em;
+}
+
+.active {
+  border-bottom: 3px solid rgb(0, 0, 0);
 }

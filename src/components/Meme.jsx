@@ -1,7 +1,5 @@
 import classes from "./Meme.module.css";
 
-import meme1 from "../images/meme1.png";
-
 export const Meme = (props) => {
   const details = props.details;
 
@@ -13,10 +11,11 @@ export const Meme = (props) => {
     details.downvotes += 1;
     props.forceUpdate();
   };
+  console.log(details.img);
   return (
     <div className={classes.meme}>
       <h1>{details.title}</h1>
-      <img src={meme1}></img>
+      <img src={require(`../images/${details.img}`)}></img>
       <div className={classes.vote}>
         <div className={classes.upvote}>
           <span>{details.upvotes}</span>
