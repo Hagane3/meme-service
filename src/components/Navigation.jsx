@@ -8,22 +8,22 @@ export const Navigation = () => {
       <ul>
         <li>
           <NavLink
-            to="regular"
-            className={({ isActive }) =>
-              isActive ? classes.active : classes.inactive
-            }
-          >
-            Regular
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
             to="/hot"
             className={({ isActive }) =>
               isActive ? classes.active : classes.inactive
             }
           >
             Hot
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="regular"
+            className={({ isActive }) =>
+              isActive ? classes.active : classes.inactive
+            }
+          >
+            Regular
           </NavLink>
         </li>
       </ul>

@@ -2,7 +2,7 @@ nav {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   padding: 1em 0;
   background-color: #6766ff;
@@ -10,7 +10,7 @@ nav {
 
 nav ul {
   width: 15%;
-  margin-right: 15%;
+  margin-left: 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,12 +25,14 @@ nav ul li a {
   font-size: 2em;
   color: white;
   padding-bottom: 0.1em;
+  font-weight: 400;
 }
 
-nav ul li:nth-child(2) a {
+nav ul li:nth-child(1) a {
   color: red;
 }
 
 .active {
-  border-bottom: 3px solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(255, 255, 255);
+  font-weight: bold;
 }
