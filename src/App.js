@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Navigation } from "./components/Navigation";
 import { Hot } from "./pages/Hot";
 import { Regular } from "./pages/Regular";
+import { MemesList } from "./pages/MemesList";
 
 import "./App.css";
 
@@ -55,8 +56,14 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Navigate replace to="/regular" />} />
-        <Route path="regular" element={<Regular database={database} />} />
-        <Route path="hot" element={<Hot database={database} />} />
+        <Route
+          path="regular"
+          element={<MemesList database={database} category="regular" />}
+        />
+        <Route
+          path="hot"
+          element={<MemesList database={database} category="hot" />}
+        />
       </Routes>
     </div>
   );
