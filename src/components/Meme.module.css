@@ -1,6 +1,7 @@
 .meme {
-  width: 50%;
+  width: 45%;
   margin-top: 2em;
+  border: 2px solid black;
 }
 
 .meme img {
@@ -10,6 +11,7 @@
 
 .meme .vote {
   display: flex;
+  border-top: 2px solid black;
 }
 
 .downvote,
@@ -29,6 +31,7 @@
 
 .downvote {
   color: red;
+  border-left: 2px solid black;
 }
 
 .upvote {
