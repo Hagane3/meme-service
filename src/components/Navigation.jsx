@@ -1,10 +1,22 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import { AddMeme } from "./AddMeme";
+import { AddMemeButton } from "./AddMemeButton";
+import { AddMemeModal } from "./AddMemeModal";
 
 import classes from "./Navigation.module.css";
 
 export const Navigation = () => {
+  const [isOpened, setIsOpened] = useState(false);
+
+  const openModalHandler = () => {
+    if (!isOpened) {
+      setIsOpened(true);
+    } else {
+      setIsOpened(false);
+    }
+    console.log(isOpened);
+  };
   return (
     <nav className={classes}>
       <ul>
@@ -28,8 +40,9 @@ export const Navigation = () => {
             Regular
           </NavLink>
         </li>
-        <AddMeme>Add Meme</AddMeme>
+        <AddMemeButton openModalHandler={openModalHandler} />
       </ul>
+      {isOpened ? <AddMemeModal /> : ""}
     </nav>
   );
 };
