@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+import { AddMeme } from "./AddMeme";
+
 import classes from "./Navigation.module.css";
 
 export const Navigation = () => {
@@ -26,6 +28,7 @@ export const Navigation = () => {
             Regular
           </NavLink>
         </li>
+        <AddMeme>Add Meme</AddMeme>
       </ul>
     </nav>
   );
