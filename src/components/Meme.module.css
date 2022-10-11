@@ -1,5 +1,5 @@
 .meme {
-  width: 50%;
+  width: 30%;
   margin-top: 5em;
   border: 1px solid lightgray;
   background-color: #fff;
@@ -20,8 +20,8 @@
 }
 
 .meme img {
-  width: 70%;
-  margin: 1.5em;
+  width: 80%;
+  margin: 1.5em 0;
 }
 
 .meme .vote {
