@@ -21,7 +21,7 @@ export const MemesList = (props) => {
     });
   };
 
-  const filteredArray = props.database.filter((data) => {
+  const filteredArray = data.filter((data) => {
     if (props.category === "hot") {
       return data.upvotes - data.downvotes > 5;
     } else {
