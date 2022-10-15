@@ -10,6 +10,7 @@ import "./App.css";
 const MEMES = [
   {
     username: "tikemyson",
+    id: 1,
     title: "Meme 1",
     upvotes: 6,
     downvotes: 0,
@@ -17,6 +18,7 @@ const MEMES = [
   },
   {
     username: "jichaelmordan",
+    id: 2,
     title: "Meme 2",
     upvotes: 3,
     downvotes: 1,
@@ -24,6 +26,7 @@ const MEMES = [
   },
   {
     username: "lrucebee",
+    id: 3,
     title: "Meme 3",
     upvotes: 5,
     downvotes: 0,
@@ -31,6 +34,7 @@ const MEMES = [
   },
   {
     username: "parryhotter",
+    id: 4,
     title: "Meme 4",
     upvotes: 1,
     downvotes: 5,
@@ -38,6 +42,7 @@ const MEMES = [
   },
   {
     username: "deonardolicaprio",
+    id: 5,
     title: "Meme 5",
     upvotes: 2,
     downvotes: 7,
@@ -45,6 +50,7 @@ const MEMES = [
   },
   {
     username: "nuckchorris",
+    id: 6,
     title: "Meme 6",
     upvotes: 8,
     downvotes: 2,
@@ -53,8 +59,6 @@ const MEMES = [
 ];
 
 function App() {
-  const [database, setDatabase] = useState(MEMES);
-
   return (
     <div className="App">
       <Navigation />
@@ -62,11 +66,11 @@ function App() {
         <Route path="/" element={<Navigate replace to="/regular" />} />
         <Route
           path="hot"
-          element={<MemesList database={database} category="hot" />}
+          element={<MemesList database={MEMES} category="hot" />}
         />
         <Route
           path="regular"
-          element={<MemesList database={database} category="regular" />}
+          element={<MemesList database={MEMES} category="regular" />}
         />
       </Routes>
     </div>

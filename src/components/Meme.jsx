@@ -1,16 +1,9 @@
 import classes from "./Meme.module.css";
 
 export const Meme = (props) => {
+  console.log("MEME RENDERED");
   const details = props.details;
 
-  const voteUpHandler = () => {
-    details.upvotes += 1;
-    props.forceUpdate();
-  };
-  const voteDownHandler = () => {
-    details.downvotes += 1;
-    props.forceUpdate();
-  };
   return (
     <div className={classes.meme}>
       <h1>@{details.username}</h1>
@@ -19,8 +12,10 @@ export const Meme = (props) => {
         <div className={classes.upvote}>
           <span>{details.upvotes}</span>
           <span
+            onClick={() => {
+              props.voteUp(props.id);
+            }}
             className={`${classes.thumbs} material-symbols-outlined`}
-            onClick={voteUpHandler}
           >
             thumb_up
           </span>
@@ -28,8 +23,10 @@ export const Meme = (props) => {
         <div className={classes.downvote}>
           <span>{details.downvotes}</span>
           <span
+            onClick={() => {
+              props.voteDown(props.id);
+            }}
             className={`${classes.thumbs} material-symbols-outlined`}
-            onClick={voteDownHandler}
           >
             thumb_down
           </span>
