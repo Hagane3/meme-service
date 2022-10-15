@@ -7,6 +7,7 @@ export const Meme = (props) => {
   return (
     <div className={classes.meme}>
       <h1>@{details.username}</h1>
+      <h2>{details.title}</h2>
       <img src={details.img}></img>
       <div className={classes.vote}>
         <div className={classes.upvote}>

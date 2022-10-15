@@ -19,6 +19,12 @@
   width: 100%;
 }
 
+.meme h2 {
+  font-size: 1em;
+  font-weight: 300;
+  margin-top: 1em;
+}
+
 .meme img {
   width: 80%;
   margin: 1.5em 0;
