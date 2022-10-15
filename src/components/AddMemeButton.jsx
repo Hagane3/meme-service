@@ -1,4 +1,4 @@
-import classes from "./AddMeme.module.css";
+import classes from "./AddMemeButton.module.css";
 
 export const AddMemeButton = (props) => {
   return (

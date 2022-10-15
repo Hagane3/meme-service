@@ -59,18 +59,35 @@ const MEMES = [
 ];
 
 function App() {
+  const [data, setData] = useState(MEMES);
+
+  const setDataHandler = (value) => {
+    setData(value);
+  };
   return (
     <div className="App">
-      <Navigation />
+      <Navigation database={data} setDatabase={setDataHandler} />
       <Routes>
         <Route path="/" element={<Navigate replace to="/regular" />} />
         <Route
           path="hot"
-          element={<MemesList database={MEMES} category="hot" />}
+          element={
+            <MemesList
+              database={data}
+              setDatabase={setDataHandler}
+              category="hot"
+            />
+          }
         />
         <Route
           path="regular"
-          element={<MemesList database={MEMES} category="regular" />}
+          element={
+            <MemesList
+              database={data}
+              setDatabase={setDataHandler}
+              category="regular"
+            />
+          }
         />
       </Routes>
     </div>

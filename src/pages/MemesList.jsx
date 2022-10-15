@@ -5,23 +5,22 @@ import classes from "./MemesList.module.css";
 
 export const MemesList = (props) => {
   console.log("MEME LIST RENDERED");
-  const [data, setData] = useState(props.database);
 
   const voteUpHandler = (id) => {
-    setData((prevData) => {
+    props.setDatabase((prevData) => {
       prevData[id - 1].upvotes++;
       return [...prevData];
     });
   };
 
   const voteDownHandler = (id) => {
-    setData((prevData) => {
+    props.setDatabase((prevData) => {
       prevData[id - 1].downvotes++;
       return [...prevData];
     });
   };
 
-  const filteredArray = data.filter((data) => {
+  const filteredArray = props.database.filter((data) => {
     if (props.category === "hot") {
       return data.upvotes - data.downvotes > 5;
     } else {
