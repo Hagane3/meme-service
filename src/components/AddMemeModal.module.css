@@ -34,12 +34,17 @@
 
 .content button {
   color: black;
-  border: 2px solid black;
+  background-color: #b08968;
   position: unset;
+}
+
+.content h1 {
+  color: #473021;
 }
 
 .content label {
   font-size: 2em;
+  color: #473021;
 }
 
 .content input {
@@ -60,7 +65,7 @@
 .content span {
   font-size: 3em;
   position: absolute;
-  top: 0.5em;
-  right: -1.4em;
+  top: 3%;
+  right: -17%;
   cursor: pointer;
 }

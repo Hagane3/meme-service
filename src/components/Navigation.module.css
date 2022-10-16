@@ -5,7 +5,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
   padding: 1em 0;
-  background-color: #6766ff;
+  background-color: #c58157;
 }
 
 nav ul {
@@ -24,15 +24,15 @@ nav ul li a {
   text-decoration: none;
   font-size: 2em;
   color: white;
-  padding-bottom: 0.1em;
+  padding-bottom: 0.05em;
   font-weight: 400;
 }
 
 nav ul li:nth-child(1) a {
-  color: red;
+  color: #473021;
+  font-weight: bold;
 }
 
 .active {
-  border-bottom: 2px solid rgb(255, 255, 255);
-  font-weight: bold;
+  border-bottom: 3px solid #473021;
 }
