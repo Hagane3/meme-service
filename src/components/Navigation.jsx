@@ -46,6 +46,7 @@ export const Navigation = (props) => {
         <AddMemeModal
           database={props.database}
           setDatabase={props.setDatabase}
+          openModalHandler={openModalHandler}
         />
       ) : (
         ""

@@ -28,6 +28,12 @@ export const AddMemeModal = (props) => {
     <div className={classes.modal}>
       <div className={classes.card}>
         <div className={classes.content}>
+          <span
+            onClick={props.openModalHandler}
+            class="material-symbols-outlined"
+          >
+            close
+          </span>
           <h1>Add your own meme!</h1>
           <div className={classes.inputs}>
             <label htmlFor="username">Username:</label>
