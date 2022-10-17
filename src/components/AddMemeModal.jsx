@@ -22,19 +22,23 @@ export const AddMemeModal = (props) => {
 
   const addMemeHandler = (event) => {
     event.preventDefault();
-    props.setDatabase((prevData) => {
-      console.log(prevData.length);
-      prevData.push({
-        username: username,
-        id: prevData.length + 1,
-        title: title,
-        upvotes: 0,
-        downvotes: 0,
-        img: url,
+    if (username.length >= 1 && title.length >= 1 && url.length >= 1) {
+      props.setDatabase((prevData) => {
+        console.log(prevData.length);
+        prevData.push({
+          username: username,
+          id: prevData.length + 1,
+          title: title,
+          upvotes: 0,
+          downvotes: 0,
+          img: url,
+        });
+        setUsername("");
+        setTitle("");
+        setUrl("");
+        return [...prevData];
       });
-      console.log(prevData);
-      return [...prevData];
-    });
+    }
   };
 
   return ReactDom.createPortal(
@@ -50,11 +54,15 @@ export const AddMemeModal = (props) => {
           <h1>Add your own meme!</h1>
           <form className={classes.inputs}>
             <label htmlFor="username">Username:</label>
-            <input onChange={setUsernameHandler} id="username"></input>
+            <input
+              onChange={setUsernameHandler}
+              value={username}
+              id="username"
+            ></input>
             <label htmlFor="title">Title:</label>
-            <input onChange={setTitleHandler} id="title"></input>
+            <input onChange={setTitleHandler} value={title} id="title"></input>
             <label htmlFor="image-url">Image url:</label>
-            <input onChange={setUrlHandler} id="image-url"></input>
+            <input onChange={setUrlHandler} value={url} id="image-url"></input>
             <button onClick={addMemeHandler}>ADD MEME</button>
           </form>
         </div>
