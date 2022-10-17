@@ -69,3 +69,7 @@
   right: -17%;
   cursor: pointer;
 }
+
+.error {
+  color: red;
+}

@@ -1,23 +1,36 @@
-import { useRef } from "react";
+import { useState } from "react";
 import ReactDom from "react-dom";
 
 import classes from "./AddMemeModal.module.css";
 
 export const AddMemeModal = (props) => {
-  const usernameValue = useRef("");
-  const titleValue = useRef("");
-  const imageUrl = useRef("");
+  const [username, setUsername] = useState("");
+  const [title, setTitle] = useState("");
+  const [url, setUrl] = useState("");
 
-  const addMemeHandler = () => {
+  const setUsernameHandler = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const setTitleHandler = (event) => {
+    setTitle(event.target.value);
+  };
+
+  const setUrlHandler = (event) => {
+    setUrl(event.target.value);
+  };
+
+  const addMemeHandler = (event) => {
+    event.preventDefault();
     props.setDatabase((prevData) => {
       console.log(prevData.length);
       prevData.push({
-        username: usernameValue.current.value,
+        username: username,
         id: prevData.length + 1,
-        title: titleValue.current.value,
-        upvotes: 5,
-        downvotes: 2,
-        img: imageUrl.current.value,
+        title: title,
+        upvotes: 0,
+        downvotes: 0,
+        img: url,
       });
       console.log(prevData);
       return [...prevData];
@@ -30,20 +43,20 @@ export const AddMemeModal = (props) => {
         <div className={classes.content}>
           <span
             onClick={props.openModalHandler}
-            class="material-symbols-outlined"
+            className="material-symbols-outlined"
           >
             close
           </span>
           <h1>Add your own meme!</h1>
-          <div className={classes.inputs}>
+          <form className={classes.inputs}>
             <label htmlFor="username">Username:</label>
-            <input ref={usernameValue} id="username"></input>
+            <input onChange={setUsernameHandler} id="username"></input>
             <label htmlFor="title">Title:</label>
-            <input ref={titleValue} id="title"></input>
+            <input onChange={setTitleHandler} id="title"></input>
             <label htmlFor="image-url">Image url:</label>
-            <input ref={imageUrl} id="image-url"></input>
-          </div>
-          <button onClick={addMemeHandler}>ADD MEME</button>
+            <input onChange={setUrlHandler} id="image-url"></input>
+            <button onClick={addMemeHandler}>ADD MEME</button>
+          </form>
         </div>
       </div>
     </div>,
