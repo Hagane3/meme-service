@@ -1,7 +1,6 @@
 import classes from "./Meme.module.css";
 
 export const Meme = (props) => {
-  console.log("MEME RENDERED");
   const details = props.details;
 
   return (

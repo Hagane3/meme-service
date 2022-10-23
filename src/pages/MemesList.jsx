@@ -1,11 +1,8 @@
-import { useState, useEffect } from "react";
 import { Meme } from "../components/Meme";
 
 import classes from "./MemesList.module.css";
 
 export const MemesList = (props) => {
-  console.log("MEME LIST RENDERED");
-
   const voteUpHandler = (id) => {
     props.setDatabase((prevData) => {
       prevData[id - 1].upvotes++;

@@ -74,6 +74,12 @@
   color: red;
 }
 
+.warning {
+  color: red;
+  position: absolute;
+  bottom: 3rem;
+}
+
 @media screen and (max-width: 768px) {
   .modal .card {
     width: 70%;

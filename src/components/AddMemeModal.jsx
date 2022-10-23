@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import ReactDom from "react-dom";
 
 import classes from "./AddMemeModal.module.css";
@@ -7,6 +7,8 @@ export const AddMemeModal = (props) => {
   const [username, setUsername] = useState("");
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
+  const [isFormValid, setIsFormValid] = useState("");
+  const [isFormSend, setIsFormSend] = useState(false);
 
   const setUsernameHandler = (event) => {
     setUsername(event.target.value);
@@ -20,11 +22,24 @@ export const AddMemeModal = (props) => {
     setUrl(event.target.value);
   };
 
+  const validityHandler = useCallback(() => {
+    console.log("checked");
+    if (username.length >= 1 && title.length >= 1 && url.length >= 1) {
+      setIsFormValid(true);
+    } else if (!isFormSend) {
+      setIsFormValid(false);
+    }
+  }, [title, url, username, isFormSend]);
+
+  useEffect(() => {
+    validityHandler();
+  }, [validityHandler]);
+
   const addMemeHandler = (event) => {
     event.preventDefault();
+    setIsFormSend(true);
     if (username.length >= 1 && title.length >= 1 && url.length >= 1) {
       props.setDatabase((prevData) => {
-        console.log(prevData.length);
         prevData.push({
           username: username,
           id: prevData.length + 1,
@@ -65,6 +80,11 @@ export const AddMemeModal = (props) => {
             <label htmlFor="image-url">Image url:</label>
             <input onChange={setUrlHandler} value={url} id="image-url"></input>
             <button onClick={addMemeHandler}>ADD MEME</button>
+            {isFormSend && !isFormValid ? (
+              <p className={classes.warning}>Inputs cannot be empty!</p>
+            ) : (
+              ""
+            )}
           </form>
         </div>
       </div>
