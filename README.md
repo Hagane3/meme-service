@@ -1,6 +1,6 @@
 # Meme Service
 
-Meme service project presents memes with upvote and downvote functionality. The application is divided into hot and regular categories.
+Meme service project presents memes with upvote and downvote functionality. The application is divided into hot and regular categories. The project completes the post-graduate studies at the Kozminski University in Warsaw.
 
 ## Table of Contents
 
