@@ -10,12 +10,11 @@ export const Navigation = (props) => {
   const [isOpened, setIsOpened] = useState(false);
 
   const openModalHandler = () => {
-    if (!isOpened) {
-      setIsOpened(true);
-    } else {
-      setIsOpened(false);
-    }
-    console.log(isOpened);
+    setIsOpened(true);
+  };
+
+  const closeModalHandler = () => {
+    setIsOpened(false);
   };
   return (
     <nav className={classes}>
@@ -47,6 +46,7 @@ export const Navigation = (props) => {
           database={props.database}
           setDatabase={props.setDatabase}
           openModalHandler={openModalHandler}
+          closeModalHandler={closeModalHandler}
         />
       ) : (
         ""
