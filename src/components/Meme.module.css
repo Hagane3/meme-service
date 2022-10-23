@@ -63,3 +63,26 @@
 .thumbs {
   cursor: pointer;
 }
+
+@media screen and (max-width: 1200px) {
+  .meme {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .meme {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .meme h1 {
+    font-size: 1.2em;
+    padding-left: 2em;
+  }
+
+  .meme {
+    width: 85%;
+  }
+}

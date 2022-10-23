@@ -25,3 +25,32 @@ button .front {
 button:active .front {
   transform: translateY(-2px);
 }
+
+@media screen and (max-width: 768px) {
+  button {
+    width: 130px;
+    height: 2em;
+    line-height: 2.2em;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  button {
+    top: 1.8em;
+    width: 100px;
+    height: 2em;
+    line-height: 2.2em;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  button {
+    top: 1.6em;
+    width: 100px;
+    height: 2em;
+    line-height: 2.2em;
+    font-size: 0.8em;
+  }
+}

@@ -73,3 +73,31 @@
 .error {
   color: red;
 }
+
+@media screen and (max-width: 768px) {
+  .modal .card {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .modal .card {
+    width: 90%;
+  }
+
+  .content span {
+    font-size: 2em;
+    position: absolute;
+    top: 3%;
+    right: -15%;
+    cursor: pointer;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content label {
+    font-size: 1.2em;
+  }
+}
