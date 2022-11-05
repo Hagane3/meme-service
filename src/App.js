@@ -68,7 +68,7 @@ function App() {
     <div className="App">
       <Navigation database={data} setDatabase={setDataHandler} />
       <Routes>
-        <Route path="/" element={<Navigate replace to="/regular" />} />
+        <Route path="/" element={<Navigate replace to="/hot" />} />
         <Route
           path="hot"
           element={
