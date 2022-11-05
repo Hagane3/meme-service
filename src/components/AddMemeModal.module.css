@@ -80,6 +80,11 @@
   bottom: 3rem;
 }
 
+button {
+  margin-bottom: 2em;
+  color: white;
+}
+
 @media screen and (max-width: 768px) {
   .modal .card {
     width: 70%;
