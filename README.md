@@ -14,13 +14,12 @@ Meme service project presents memes with upvote and downvote functionality. The 
 - React - version 18.2.0
 - React Router - version 6.4.2
 
-## Features
+## Foundations
 
-List the ready features here:
-
-- upvote and downvote memes
-- /hot /regular categories
-- add new meme
+- /hot and /regular memes categories
+- memes are objects stored in array
+- assigning /hot category for meme is based on simply algorithm [ upvotes - downvotes > 5 ]
+- user can add own meme
 
 ## Setup
 
