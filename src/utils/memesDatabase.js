@@ -47,6 +47,30 @@ const MEMES = [
     downvotes: 2,
     img: "images/meme6.png",
   },
+  {
+    username: "gillbates",
+    id: 7,
+    title: "Meme 7",
+    upvotes: 10,
+    downvotes: 3,
+    img: "images/meme7.png",
+  },
+  {
+    username: "lalaidama",
+    id: 8,
+    title: "Meme 8",
+    upvotes: 7,
+    downvotes: 4,
+    img: "images/meme8.png",
+  },
+  {
+    username: "boejiden",
+    id: 9,
+    title: "Meme 9",
+    upvotes: 2,
+    downvotes: 9,
+    img: "images/meme9.png",
+  },
 ];
 
 export default MEMES;
