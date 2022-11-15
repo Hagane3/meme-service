@@ -9,7 +9,6 @@ import MEMES from "./utils/memesDatabase";
 import "./App.css";
 
 function App() {
-  console.log("Test");
   const [data, setData] = useState(MEMES);
 
   const setDataHandler = (value) => {
