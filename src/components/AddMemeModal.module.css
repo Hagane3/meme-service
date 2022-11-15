@@ -33,7 +33,7 @@
 }
 
 .content button {
-  color: black;
+  color: rgb(255, 255, 255);
   background-color: #b08968;
   position: unset;
 }
