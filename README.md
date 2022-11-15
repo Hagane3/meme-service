@@ -29,4 +29,4 @@ Meme service project presents memes with upvote and downvote functionality. The 
 
 ## Project Status
 
-Project is: _in progress_
+Project is: completed
