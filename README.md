@@ -1,6 +1,6 @@
 # Meme Service
 
-<a href="https://meme-service-alk.netlify.app/">LIVE DEMO</a>
+<a href="https://meme-service.netlify.app">LIVE DEMO</a>
 
 Meme service project presents memes with upvote and downvote functionality. The application is divided into hot and regular categories. The project completes the post-graduate studies at the Kozminski University in Warsaw.
 
