@@ -51,7 +51,7 @@ export const AddMemeModal = (props) => {
         setUsername("");
         setTitle("");
         setUrl("");
-        props.closeModalHandler();
+        props.toggleModalHandler();
         return [...prevData];
       });
     }
@@ -62,7 +62,7 @@ export const AddMemeModal = (props) => {
       <div className={classes.card}>
         <div className={classes.content}>
           <span
-            onClick={props.closeModalHandler}
+            onClick={props.toggleModalHandler}
             className="material-symbols-outlined"
           >
             close
