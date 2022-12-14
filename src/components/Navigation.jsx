@@ -9,13 +9,10 @@ import classes from "./Navigation.module.css";
 export const Navigation = (props) => {
   const [isOpened, setIsOpened] = useState(false);
 
-  const openModalHandler = () => {
-    setIsOpened(true);
+  const toggleModalHandler = () => {
+    setIsOpened(!isOpened);
   };
 
-  const closeModalHandler = () => {
-    setIsOpened(false);
-  };
   return (
     <nav className={classes}>
       <ul>
@@ -39,14 +36,13 @@ export const Navigation = (props) => {
             Regular
           </NavLink>
         </li>
-        <AddMemeButton openModalHandler={openModalHandler} />
+        <AddMemeButton toggleModalHandler={toggleModalHandler} />
       </ul>
       {isOpened ? (
         <AddMemeModal
           database={props.database}
           setDatabase={props.setDatabase}
-          openModalHandler={openModalHandler}
-          closeModalHandler={closeModalHandler}
+          toggleModalHandler={toggleModalHandler}
         />
       ) : (
         ""
