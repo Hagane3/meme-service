@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { Navigation } from "./components/Navigation";
 import { MemesList } from "./pages/MemesList";
-import MEMES from "./utils/memesDatabase";
+import MEMES from "./data/memesDatabase";
 
 import "./App.css";
 
