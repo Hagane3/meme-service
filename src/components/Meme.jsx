@@ -1,9 +1,12 @@
 import classes from "./Meme.module.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { ImSpinner2 } from "react-icons/im";
 
 import CartContext from "../CartContext";
 
 export const Meme = (props) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   const { voteUpHandler, voteDownHandler } = useContext(CartContext);
   const details = props.details;
 
@@ -11,7 +14,19 @@ export const Meme = (props) => {
     <div className={classes.meme}>
       <h1>@{details.username}</h1>
       <h2>~ {details.title}</h2>
-      <img src={details.img} alt="meme"></img>
+      {isLoading && (
+        <div className={classes.loader}>
+          <ImSpinner2 />
+        </div>
+      )}
+      <img
+        src={details.img}
+        alt="meme"
+        style={isLoading ? { display: "none" } : { display: "inline-block" }}
+        onLoad={() => {
+          setIsLoading(false);
+        }}
+      />
       <div className={classes.vote}>
         <div className={classes.upvote}>
           <span>{details.upvotes}</span>
