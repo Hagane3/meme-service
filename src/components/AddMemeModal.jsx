@@ -82,7 +82,7 @@ export const AddMemeModal = (props) => {
             <input onChange={setTitleHandler} value={title} id="title"></input>
             <label htmlFor="image-url">Image url:</label>
             <input onChange={setUrlHandler} value={url} id="image-url"></input>
-            <button onClick={addMemeHandler}>ADD MEME</button>
+            <button onClick={addMemeHandler}>ADD</button>
             {isFormSend && !isFormValid ? (
               <p className={classes.warning}>Inputs cannot be empty!</p>
             ) : (

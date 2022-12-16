@@ -1,7 +1,7 @@
 .meme {
   width: 30%;
   margin-top: 5em;
-  background-color: #fff;
+  background-color: var(--bg-card);
   border-radius: 3em;
   -webkit-box-shadow: 8px 8px 24px -7px rgba(66, 68, 90, 1);
   -moz-box-shadow: 8px 8px 24px -7px rgba(66, 68, 90, 1);
@@ -65,12 +65,12 @@
 }
 
 .downvote {
-  color: red;
+  color: var(--danger);
   border-left: 1px solid #d6d6d6;
 }
 
 .upvote {
-  color: green;
+  color: var(--success);
 }
 
 .thumbs {

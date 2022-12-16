@@ -5,7 +5,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
   padding: 1em 0;
-  background-color: #c58157;
+  background-color: var(--bg-secondary);
 }
 
 nav ul {
@@ -23,18 +23,18 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-size: 2em;
-  color: white;
+  color: var(--text-light);
   padding-bottom: 0.05em;
   font-weight: 400;
 }
 
 nav ul li:nth-child(1) a {
-  color: #473021;
+  color: var(--text-secondary);
   font-weight: bold;
 }
 
 .active {
-  border-bottom: 3px solid #473021;
+  border-bottom: 3px solid var(--text-active);
 }
 
 @media screen and (max-width: 1300px) {
