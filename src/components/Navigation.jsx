@@ -6,7 +6,7 @@ import { AddMemeModal } from "./AddMemeModal";
 
 import classes from "./Navigation.module.css";
 
-export const Navigation = (props) => {
+export const Navigation = () => {
   const [isOpened, setIsOpened] = useState(false);
 
   const toggleModalHandler = () => {
@@ -38,15 +38,7 @@ export const Navigation = (props) => {
         </li>
         <AddMemeButton toggleModalHandler={toggleModalHandler} />
       </ul>
-      {isOpened ? (
-        <AddMemeModal
-          database={props.database}
-          setDatabase={props.setDatabase}
-          toggleModalHandler={toggleModalHandler}
-        />
-      ) : (
-        ""
-      )}
+      {isOpened ? <AddMemeModal toggleModalHandler={toggleModalHandler} /> : ""}
     </nav>
   );
 };

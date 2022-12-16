@@ -1,6 +1,10 @@
 import classes from "./Meme.module.css";
+import { useContext } from "react";
+
+import CartContext from "../CartContext";
 
 export const Meme = (props) => {
+  const { voteUpHandler, voteDownHandler } = useContext(CartContext);
   const details = props.details;
 
   return (
@@ -13,7 +17,7 @@ export const Meme = (props) => {
           <span>{details.upvotes}</span>
           <span
             onClick={() => {
-              props.voteUp(props.id);
+              voteUpHandler(props.id);
             }}
             className={`${classes.thumbs} material-symbols-outlined`}
           >
@@ -24,7 +28,7 @@ export const Meme = (props) => {
           <span>{details.downvotes}</span>
           <span
             onClick={() => {
-              props.voteDown(props.id);
+              voteDownHandler(props.id);
             }}
             className={`${classes.thumbs} material-symbols-outlined`}
           >
