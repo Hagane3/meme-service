@@ -25,7 +25,7 @@ Meme service project presents memes with upvote and downvote functionality. The 
 
 ## Setup
 
-    cd react-meme
+    cd meme-service
     npm install
     npm start
 
