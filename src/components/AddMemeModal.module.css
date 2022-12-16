@@ -89,7 +89,7 @@ button {
 
 @media screen and (max-width: 768px) {
   .modal {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .modal .card {
     width: 80%;
