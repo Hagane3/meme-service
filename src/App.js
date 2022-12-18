@@ -1,7 +1,8 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 
 import { Navigation } from "./components/Navigation";
-import { MemesList } from "./pages/MemesList";
+import { HotMemesPage } from "./pages/HotMemesPage";
+import { RegularMemesPage } from "./pages/RegularMemesPage";
 
 import { CartProvider } from "./CartContext";
 
@@ -14,8 +15,8 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Navigate replace to="/hot" />} />
-          <Route path="hot" element={<MemesList category="hot" />} />
-          <Route path="regular" element={<MemesList category="regular" />} />
+          <Route path="hot" element={<HotMemesPage />} />
+          <Route path="regular" element={<RegularMemesPage />} />
         </Routes>
       </CartProvider>
     </div>

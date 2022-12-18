@@ -1,18 +1,14 @@
 import { useContext } from "react";
 import { Meme } from "../components/Meme";
 
-import classes from "./MemesList.module.css";
+import classes from "./HotMemesPage.module.css";
 import CartContext from "../CartContext";
 
-export const MemesList = (props) => {
+export const HotMemesPage = () => {
   const { data } = useContext(CartContext);
 
   const filteredArray = data.filter((item) => {
-    if (props.category === "hot") {
-      return item.upvotes - item.downvotes > 5;
-    } else {
-      return item.upvotes - item.downvotes <= 5;
-    }
+    return item.upvotes - item.downvotes > 5;
   });
 
   return (
