@@ -12,14 +12,14 @@ export function CartProvider({ children }) {
 
   const voteUpHandler = (id) => {
     setDataHandler((prevData) => {
-      prevData[id - 1].upvotes++;
+      prevData[prevData.findIndex((item) => item.id === id)].upvotes++;
       return [...prevData];
     });
   };
 
   const voteDownHandler = (id) => {
     setDataHandler((prevData) => {
-      prevData[id - 1].downvotes++;
+      prevData[prevData.findIndex((item) => item.id === id)].downvotes++;
       return [...prevData];
     });
   };
